@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Add Product</h2>
+
+<form method="POST" class="post-form"> 
+    {% csrf_token %} 
+    <table class="table">
+        {{form.as_table}}
+    </table>
+    <button type="submit" class="save btn btn_default">Save</button>
+</form>
+
+{% endblock %}
